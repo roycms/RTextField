@@ -32,6 +32,10 @@
     _maxLength = maxLength;
 }
 
+-(void)setVerifyModel:(VerifyModel)verifyModel{
+    _verifyModel = verifyModel;
+}
+
 
 #pragma mark - UITextFieldDelegate
 

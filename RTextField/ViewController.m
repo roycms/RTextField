@@ -19,8 +19,8 @@
     RTextField *textField = [[RTextField alloc]init];
     textField.backgroundColor = [UIColor blueColor];
     textField.alpha = 0.9;
-    textField.maxLength = 3; //限定最大的可输入的长度
-    textField.verifyModel = Email;
+//    textField.maxLength = 3; //限定最大的可输入的长度
+    textField.verifyModel = PhoneNumber;
     textField.frame =  CGRectMake(10, 100, 300, 40);
     [self.view addSubview:textField];
     
