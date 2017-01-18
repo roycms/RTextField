@@ -134,9 +134,16 @@
 -(void)warningTip{
     self.backgroundColor = [UIColor redColor];
     self.alpha = 0.6;
+    
+    if (self.noPass) {
+        self.noPass();
+    }
 }
 -(void)clearWarningTip{
     self.backgroundColor = [UIColor clearColor];
+    if (self.pass) {
+        self.pass();
+    }
 }
 
 @end
