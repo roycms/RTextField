@@ -11,6 +11,7 @@
 ```
  RTextField *textField = [[RTextField alloc]init];
  textField.maxLength = 3; //限定最大的可输入的长度
+ textField.verifyModel = PhoneNumber; // 输入框类型 Email, PhoneNumber, MobelNumber, Url,NomalString, MobileNumberOrPhoneNumber
 ```
 
 ## TODO 
