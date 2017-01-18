@@ -7,12 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSString+PJR.h"
+
+typedef NS_ENUM(NSInteger,VerifyModel) {
+    Email = 0,
+    PhoneNumber,
+    MobelNumber,
+    Url,
+    NomalString,
+    MobileNumberOrPhoneNumber,
+};
 
 @interface RTextField : UITextField <UITextFieldDelegate>
-
-@property (nonatomic, assign) int minLength;
+@property (nonatomic, assign) VerifyModel verifyModel;
 @property (nonatomic, assign) int maxLength;
-
 @property (nonatomic, copy) void(^noPass)();
 @property (nonatomic, copy) void(^pass)();
 @end

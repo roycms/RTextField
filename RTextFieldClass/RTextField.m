@@ -18,13 +18,18 @@
     }
     return self;
 }
+- (instancetype)initWithStyle:(VerifyModel)verifyModel{
+    self = [super init];
+    if(self){
+        self.delegate = self;
+        _verifyModel = verifyModel;
+    }
+    return self;
+}
+
 
 -(void)setMaxLength:(int)maxLength{
     _maxLength = maxLength;
-}
-
--(void)setMinLength:(int)minLength{
-    _minLength = minLength;
 }
 
 
@@ -65,6 +70,73 @@
             }
         }
     }
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    if (textField == self) {
+        
+        switch (_verifyModel) {
+            case 0:
+                if (![textField.text isValidEmail]) {
+                    [self warningTip];
+                }
+                else{
+                    [self clearWarningTip];
+                }
+                break;
+            case 1:
+                if (![textField.text isVAlidPhoneNumber]) {
+                    [self warningTip];
+                }
+                else{
+                    [self clearWarningTip];
+                }
+                break;
+            case 2:
+                if (![textField.text isVAlidMobelNumber]) {
+                    [self warningTip];
+                }
+                else{
+                    [self clearWarningTip];
+                }
+                break;
+            case 3:
+                if (![textField.text isValidUrl]) {
+                    [self warningTip];
+                }
+                else{
+                    [self clearWarningTip];
+                }
+                break;
+            case 4:
+                if (![textField.text isValidNomalString]) {
+                    [self warningTip];
+                }
+                else{
+                    [self clearWarningTip];
+                }
+                break;
+            case 5:
+                if (![textField.text isValidMobileNumberOrPhoneNumber]) {
+                    [self warningTip];
+                }
+                else{
+                    [self clearWarningTip];
+                }
+                break;
+                
+            default:
+                break;
+        }
+    }
+}
+
+-(void)warningTip{
+    self.backgroundColor = [UIColor redColor];
+    self.alpha = 0.6;
+}
+-(void)clearWarningTip{
+    self.backgroundColor = [UIColor clearColor];
 }
 
 @end

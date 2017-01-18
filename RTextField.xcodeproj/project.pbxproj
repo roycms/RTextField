@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0659EC91E2F604600A42D09 /* NSString+PJR.m in Sources */ = {isa = PBXBuildFile; fileRef = B0659EC81E2F604600A42D09 /* NSString+PJR.m */; };
 		B0A5DA401E2DB274008CB1BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A5DA3F1E2DB274008CB1BF /* main.m */; };
 		B0A5DA431E2DB274008CB1BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A5DA421E2DB274008CB1BF /* AppDelegate.m */; };
 		B0A5DA461E2DB274008CB1BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A5DA451E2DB274008CB1BF /* ViewController.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0659EC71E2F604600A42D09 /* NSString+PJR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PJR.h"; sourceTree = "<group>"; };
+		B0659EC81E2F604600A42D09 /* NSString+PJR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PJR.m"; sourceTree = "<group>"; };
 		B0A5DA3B1E2DB274008CB1BF /* RTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A5DA3F1E2DB274008CB1BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0A5DA411E2DB274008CB1BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,9 +84,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0659EC61E2F604600A42D09 /* NSString+PJR */ = {
+			isa = PBXGroup;
+			children = (
+				B0659EC71E2F604600A42D09 /* NSString+PJR.h */,
+				B0659EC81E2F604600A42D09 /* NSString+PJR.m */,
+			);
+			path = "NSString+PJR";
+			sourceTree = "<group>";
+		};
 		B0A5DA321E2DB274008CB1BF = {
 			isa = PBXGroup;
 			children = (
+				B0659EC61E2F604600A42D09 /* NSString+PJR */,
 				B0A5DA711E2DB2A1008CB1BF /* RTextFieldClass */,
 				B0A5DA3D1E2DB274008CB1BF /* RTextField */,
 				B0A5DA571E2DB275008CB1BF /* RTextFieldTests */,
@@ -288,6 +301,7 @@
 			files = (
 				B0A5DA461E2DB274008CB1BF /* ViewController.m in Sources */,
 				B0A5DA431E2DB274008CB1BF /* AppDelegate.m in Sources */,
+				B0659EC91E2F604600A42D09 /* NSString+PJR.m in Sources */,
 				B0A5DA741E2DB2C3008CB1BF /* RTextField.m in Sources */,
 				B0A5DA401E2DB274008CB1BF /* main.m in Sources */,
 			);
@@ -521,6 +535,7 @@
 				B0A5DA6A1E2DB275008CB1BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0A5DA6B1E2DB275008CB1BF /* Build configuration list for PBXNativeTarget "RTextFieldTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +544,7 @@
 				B0A5DA6D1E2DB275008CB1BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0A5DA6E1E2DB275008CB1BF /* Build configuration list for PBXNativeTarget "RTextFieldUITests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +553,7 @@
 				B0A5DA701E2DB275008CB1BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
